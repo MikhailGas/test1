@@ -9,7 +9,7 @@
                     <a class="product__name">{{ product.name }} </a>
                     <div class="product__price">{{ product.price }}</div>
                 </div>
-                <a @click="addToCart(product)"  class="add_to_cart"><img class="add_to_cart_img" src="../../assets/img/Forma_1_copy.svg" alt="">Добавить в козину</a>
+                <a @click="ADD_TO_CART(product)"  class="add_to_cart"><img class="add_to_cart_img" src="../../assets/img/Forma_1_copy.svg" alt="">Добавить в козину</a>
             </div>
             
         </div>
@@ -30,15 +30,10 @@ export default {
     },
     methods:{
         ...mapActions([
-        'GET_PRODUCTS_FROM_API',
+         'ADD_TO_CART',
         ]),
-        addToCart(product){
-            console.log(product);
-            
-        }
-    },mounted() {
-        this.GET_PRODUCTS_FROM_API()
-    },
+        
+    }
 }
 </script>
 
